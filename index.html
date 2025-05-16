@@ -11,13 +11,16 @@
       padding: 0;
       background: #f4f4f4;
       color: #333;
+      word-wrap: break-word;
     }
+
     header {
       background: #111;
       color: #fff;
       padding: 20px;
       text-align: center;
     }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -26,6 +29,7 @@
       max-width: 1000px;
       margin: 0 auto;
     }
+
     .gallery img {
       width: 100%;
       height: auto;
@@ -36,7 +40,9 @@
 
     form,
     footer,
-    #impressum {
+    #impressum,
+    .bedingungen-box,
+    .preistabelle {
       background: white;
       max-width: 1000px;
       width: 90%;
@@ -45,6 +51,8 @@
       border-radius: 8px;
       box-sizing: border-box;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow-wrap: break-word;
+      word-wrap: break-word;
     }
 
     form {
@@ -87,31 +95,17 @@
     }
 
     .checkbox-label {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
+      display: block;
       font-size: 0.95rem;
     }
 
     .checkbox-label input[type="checkbox"] {
-      margin-top: 4px;
+      margin-right: 8px;
+      vertical-align: middle;
     }
 
-    .bedingungen-box {
-      background: #fff;
-      max-width: 1000px;
-      width: 90%;
-      margin: 0 auto 40px auto;
-      padding: 20px;
-      border-radius: 8px;
-      box-sizing: border-box;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .preistabelle {
-      max-width: 1000px;
-      width: 90%;
-      margin: 0 auto;
+    .bedingungen-box ul {
+      padding-left: 20px;
     }
 
     .preistabelle table {
@@ -135,6 +129,13 @@
 
     .preistabelle tbody tr:nth-child(even) {
       background-color: #f9f9f9;
+    }
+
+    footer p,
+    #impressum p {
+      margin: 0.5em 0;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
   </style>
 </head>
@@ -182,8 +183,8 @@
           <tr>
             <td>Soundboks Go</td>
             <td>20 €</td>
-            <td>30 €</td>
-            <td>50 €</td>
+            <td>40 €</td>
+            <td>60 €</td>
             <td>Nach Absprache</td>
           </tr>
         </tbody>
@@ -233,7 +234,6 @@
     </form>
   </section>
 
-  <!-- Bedingungen -->
   <section class="bedingungen-box">
     <h3>Bedingungen</h3>
     <ul>
@@ -245,18 +245,34 @@
 
   <footer>
     <h2>Kontakt</h2>
-    <p>Bremen/Oldenburg: Marius Mielke – soundcheck.partyboxenvermietung@gmail.com – Tel: +49 173 2424498</p>
-    <p>Köln: Lennard Ahrens – soundcheck.partyboxenvermietung@gmail.com – Tel: +49 172 6128251</p>
+    <p><strong>Bremen/Oldenburg:</strong><br>
+    Marius Mielke<br>
+    <a href="mailto:soundcheck.partyboxenvermietung@gmail.com">soundcheck.partyboxenvermietung@gmail.com</a><br>
+    Tel: +49 173 2424498</p>
+
+    <p><strong>Köln:</strong><br>
+    Lennard Ahrens<br>
+    <a href="mailto:soundcheck.partyboxenvermietung@gmail.com">soundcheck.partyboxenvermietung@gmail.com</a><br>
+    Tel: +49 172 6128251</p>
   </footer>
 
   <section id="impressum">
     <h2>Impressum</h2>
     <p>Angaben gemäß § 5 TMG:</p>
-    <p>Marius Mielke<br>Mielke's Partyboxen<br>Heinz-Schulz-Weg 60<br>28357 Bremen<br>Steueridentifikationsnummer: 57498610353</p>
-    <p>Kontakt:<br>Telefon: +49 173 2424498<br>E-Mail: soundcheck.partyboxenvermietung@gmail.com</p>
+    <p>
+      Marius Mielke<br>
+      Mielke's Partyboxen<br>
+      Heinz-Schulz-Weg 60<br>
+      28357 Bremen<br>
+      Steueridentifikationsnummer: 57498610353
+    </p>
+    <p>
+      Kontakt:<br>
+      Telefon: +49 173 2424498<br>
+      <a href="mailto:soundcheck.partyboxenvermietung@gmail.com">soundcheck.partyboxenvermietung@gmail.com</a>
+    </p>
   </section>
 
-  <!-- 100% privacy-first analytics -->
   <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 
 </body>
