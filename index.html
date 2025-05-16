@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soundcheck – Soundboks Vermietung</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 8px;
+      padding: 10px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+    }
+    form {
+      background: white;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      box-sizing: border-box;
+    }
+    form label {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      resize: vertical; /* Textarea vertikal skalierbar */
+      margin-bottom: 0;  /* Abstand wird durch gap im Formular geregelt */
+      display: block;
+    }
+    form button {
+      background: #111;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 700;
+      transition: background-color 0.2s ease;
+    }
+    form button:hover {
+      background-color: #333;
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    #impressum {
+      background:#fff;
+      padding: 20px;
+      max-width: 600px;
+      margin: 40px auto;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Soundcheck</h1>
+    <p>Jetzt eine gute Zeit mieten !</p>
+  </header>
+
+  <section class="gallery">
+    <img src="Köln.jpg" alt="Köln" />
+    <img src="Köln (7).jpg" alt="Bremen" />
+    <img src="Köln (8).jpg" alt="Oldenburg" />
+  </section>
+
+  <section>
+   <form action="https://formspree.io/f/manovopn" method="POST">
+    <h2>Jetzt anfragen</h2>
+
+    <label for="email">E-Mail-Adresse</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="from">Von</label>
+    <input type="date" id="from" name="von" required>
+
+    <label for="to">Bis</label>
+    <input type="date" id="to" name="bis" required>
+
+    <label for="box">Welche Box?</label>
+    <select id="box" name="box" required>
+      <option value="">Bitte auswählen</option>
+      <option value="soundboks3">Soundboks 3</option>
+      <option value="soundboks4">Soundboks 4</option>
+      <option value="soundboksGo">Soundboks Go</option>
+    </select>
+
+    <label for="location">Standort</label>
+    <select id="location" name="standort" required>
+      <option value="">Bitte auswählen</option>
+      <option value="berlin">Köln</option>
+      <option value="hamburg">Bremen</option>
+      <option value="koeln">Oldenburg</option>
+    </select>
+
+    <label for="nachricht">Dein Anliegen</label>
+    <textarea id="nachricht" name="nachricht" rows="5" placeholder="Gib hier deine Nachricht ein..." required></textarea>
+
+    <button type="submit">Anfrage senden</button>
+  </form>
+  </section>
+
+  <footer>
+    <h2>Kontakt</h2>
+    <p>Bremen/Oldenburg: Marius Mielke – soundcheck.partyboxenvermietung@gmail.com – Tel: +49 173 2424498</p>
+    <p>Köln: Lennard Ahrens – soundcheck.partyboxenvermietung@gmail.com – Tel: +49 172 6128251</p>
+  </footer>
+
+  <section id="impressum">
+    <h2>Impressum</h2>
+    <p>Angaben gemäß § 5 TMG:</p>
+    <p>Marius Mielke<br>Mielke's Partyboxen<br>Heinz-Schulz-Weg 60<br>28357 Bremen</p>
+    <p>Kontakt:<br>Telefon: +49 173 2424498<br>E-Mail: soundcheck.partyboxenvermietung@gmail.com</p>
+  </section>
+
+</body>
+</html>
